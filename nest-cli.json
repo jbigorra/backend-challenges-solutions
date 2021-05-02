@@ -1,4 +1,30 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "apps/exchange-rate/src",
+  "monorepo": true,
+  "root": "apps/exchange-rate",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/exchange-rate/tsconfig.app.json"
+  },
+  "projects": {
+    "exchange-rate": {
+      "type": "application",
+      "root": "apps/exchange-rate",
+      "entryFile": "main",
+      "sourceRoot": "apps/exchange-rate/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/exchange-rate/tsconfig.app.json"
+      }
+    },
+    "city-suggestions": {
+      "type": "application",
+      "root": "apps/city-suggestions",
+      "entryFile": "main",
+      "sourceRoot": "apps/city-suggestions/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/city-suggestions/tsconfig.app.json"
+      }
+    }
+  }
 }
