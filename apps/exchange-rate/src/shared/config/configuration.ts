@@ -1,5 +1,5 @@
 interface IEnvVariables {
-  OER_APP_ID:
+  OER_APP_ID: string
 }
 
 export default () => {
